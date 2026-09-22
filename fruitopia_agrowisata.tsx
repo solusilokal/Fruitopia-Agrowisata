@@ -39,7 +39,7 @@ const pageData = {
     facebook: "https://facebook.com/"
   },
   locationHighlights: [
-    { time: "Buka Setiap", place: "Hari (08.00 - 17.00)" },
+    { time: "Buka Setiap Hari", place: "(08.00 - 17.00)" },
     { time: "100%", place: "Buah Organik & Segar" },
     { time: "Area", place: "Parkir Luas & Nyaman" }
   ],
@@ -298,9 +298,9 @@ export default function App() {
             </p>
             <div className="grid grid-cols-3 gap-3 mt-6">
               {pageData.locationHighlights.map((hl, idx) => (
-                <div key={idx} className="bg-amber-100/50 p-3 rounded-2xl text-center border border-amber-200/60">
-                  <div className="text-[11px] font-bold text-[#27411D]">{hl.time}</div>
-                  <div className="text-[10px] text-[#4b6b3e] mt-1">{hl.place}</div>
+                <div key={idx} className="bg-amber-100/50 p-3 rounded-2xl text-center border border-amber-200/60 flex flex-col justify-center items-center min-h-[64px]">
+                  <div className="text-[11px] font-bold text-[#27411D] leading-tight">{hl.time}</div>
+                  <div className="text-[10px] text-[#4b6b3e] mt-1 leading-tight">{hl.place}</div>
                 </div>
               ))}
             </div>
@@ -393,12 +393,12 @@ export default function App() {
 
           <div className="flex flex-col gap-3">
             {pageData.pricingList.map((priceItem, idx) => (
-              <div key={idx} className="bg-white p-4 rounded-2xl border border-amber-200/60 shadow-sm flex items-center justify-between">
-                <div>
+              <div key={idx} className="bg-white p-4 rounded-2xl border border-amber-200/60 shadow-sm flex items-center justify-between gap-3">
+                <div className="flex-1">
                   <h3 className="font-bold text-[#27411D] text-sm">{priceItem.item}</h3>
                   <p className="text-[#517541] text-xs mt-0.5">{priceItem.note}</p>
                 </div>
-                <span className="font-extrabold text-[#E06D2D] text-sm bg-amber-100/60 px-3 py-1.5 rounded-xl border border-amber-200">
+                <span className="font-extrabold text-[#E06D2D] text-sm bg-amber-100/60 px-4 py-1.5 rounded-xl border border-amber-200 shrink-0 min-w-[140px] text-center">
                   {priceItem.price}
                 </span>
               </div>
