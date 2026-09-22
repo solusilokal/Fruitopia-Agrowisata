@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitopia Agrowisata - Wisata Petik Buah Segar</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #FAF6ED;
+      color: #27411D;
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF6ED] text-[#27411D]">
+
+  <!-- MAIN WRAPPER (MOBILE SIZED CONTAINER) -->
+  <main class="w-full max-w-[480px] mx-auto relative shadow-2xl bg-[#FAF6ED] min-h-screen overflow-hidden pb-32">
+    
+    <!-- HERO SECTION -->
+    <section class="relative w-full min-h-[90dvh] flex flex-col justify-end pb-12 px-6 bg-[#27411D]">
+      
+      <button
+        onclick="handleShare()"
+        aria-label="Share this page"
+        class="absolute top-6 right-6 z-20 p-3 bg-[#1d3115]/60 backdrop-blur-md rounded-full border border-amber-200/20 text-white hover:bg-[#1d3115] transition-all shadow-sm"
+      >
+        <i data-lucide="share" class="w-5 h-5"></i>
+      </button>
+
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="./background.webp" 
+          alt="Fruitopia Agrowisata" 
+          class="w-full h-full object-cover object-top opacity-75"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#27411D] via-[#27411D]/75 via-50% to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center text-center mt-20">
+        <div class="w-32 h-32 rounded-full p-1.5 bg-white/90 backdrop-blur-md mb-6 shadow-2xl border-2 border-amber-300/60 overflow-hidden">
+          <img 
+            src="./profile.png" 
+            alt="Profile" 
+            class="w-full h-full rounded-full object-cover"
+          />
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-300/30 text-amber-200 text-xs font-semibold mb-3">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Agrowisata & Edukasi Buah
+        </div>
+
+        <h1 class="text-4xl font-extrabold text-amber-50 mb-3 leading-tight tracking-tight drop-shadow-md">
+          Fruitopia Agrowisata
+        </h1>
+        <p class="text-amber-100/90 font-light text-sm leading-relaxed mb-6 max-w-[95%]">
+          Nikmati pengalaman rekreasi edukatif dan alam terbuka yang menyenangkan di Fruitopia. Petik buah segar berkualitas tinggi dengan udara asri langsung dari kebun organik kami.
+        </p>
+
+        <div class="flex flex-col gap-2.5 w-full max-w-sm mb-8">
+          <div class="grid grid-cols-2 gap-3 w-full">
+            <a 
+              href="https://www.instagram.com/solusilokal.id"
+              target="_blank"
+              rel="noreferrer"
+              class="flex items-center justify-center gap-2 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all text-white shadow-sm text-sm font-medium"
+            >
+              <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+            </a>
+            <a 
+              href="https://tiktok.com/@solusilokal.id"
+              target="_blank"
+              rel="noreferrer"
+              class="flex items-center justify-center gap-2 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all text-white shadow-sm text-sm font-medium"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg> TikTok
+            </a>
+          </div>
+          <a 
+            href="https://maps.google.com/?cid=18047471913162934794"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center justify-center gap-2 py-3.5 w-full rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all text-white shadow-sm text-sm font-medium"
+          >
+            <i data-lucide="map-pin" class="w-4 h-4"></i> Lokasi Google Maps
+          </a>
+        </div>
+
+        <button 
+          onclick="scrollToSection('booking-form')"
+          class="group relative flex items-center justify-center gap-3 w-full max-w-sm py-4 bg-[#E06D2D] text-white rounded-2xl font-bold text-[13px] uppercase tracking-wider hover:bg-[#c95d22] transition-all shadow-lg"
+        >
+          Reservasi Kunjungan
+          <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang-kami" class="py-12 px-6 bg-[#FAF6ED] border-b border-[#E8DFCE]">
+      <div class="max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="trees" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Tentang Fruitopia</h2>
+        </div>
+        <p class="text-[#3c5e2e] leading-relaxed text-sm">
+          Fruitopia adalah destinasi agrowisata unggulan di Palangka Raya yang memadukan kebun buah organik modern dengan rekreasi keluarga yang edukatif dan menyenangkan. Kami berkomitmen menyediakan pengalaman agrowisata terbaik bagi seluruh pengunjung.
+        </p>
+        <div class="grid grid-cols-3 gap-3 mt-6">
+          <div class="bg-amber-100/50 p-3 rounded-2xl text-center border border-amber-200/60">
+            <div class="text-[11px] font-bold text-[#27411D]">Buka Setiap</div>
+            <div class="text-[10px] text-[#4b6b3e] mt-1">Hari (08.00 - 17.00)</div>
+          </div>
+          <div class="bg-amber-100/50 p-3 rounded-2xl text-center border border-amber-200/60">
+            <div class="text-[11px] font-bold text-[#27411D]">100%</div>
+            <div class="text-[10px] text-[#4b6b3e] mt-1">Buah Organik & Segar</div>
+          </div>
+          <div class="bg-amber-100/50 p-3 rounded-2xl text-center border border-amber-200/60">
+            <div class="text-[11px] font-bold text-[#27411D]">Area</div>
+            <div class="text-[10px] text-[#4b6b3e] mt-1">Parkir Luas & Nyaman</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="py-12 px-6 bg-[#F4EEDE] border-b border-[#E8DFCE]">
+      <div class="max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="clock" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Sejarah & Perjalanan</h2>
+        </div>
+        <p class="text-[#3c5e2e] leading-relaxed text-sm bg-[#FAF6ED] p-5 rounded-2xl border border-amber-200/50 shadow-sm">
+          Berdiri sejak tahun 2018, Fruitopia berawal dari lahan percontohan hortikultura lokal yang kini berkembang menjadi kawasan wisata petik buah favorit. Ribuan pengunjung telah menikmati edukasi pertanian dan kesegaran buah langsung dari pohonnya.
+        </p>
+      </div>
+    </section>
+
+    <!-- KATALOG BUAH -->
+    <section id="katalog" class="py-12 px-6 bg-[#FAF6ED] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="apple" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Katalog Buah Segar</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Geser ke samping untuk melihat berbagai varian buah segar siap petik di kebun kami.</p>
+      </div>
+
+      <div id="catalog-container" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+        <!-- Cards will be populated by JS -->
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="py-12 px-6 bg-[#F4EEDE] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="trees" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Galeri Kebun Fruitopia</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Suasana asri dan keseruan pengunjung di kebun kami.</p>
+      </div>
+      
+      <div id="gallery-container" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 no-scrollbar">
+        <!-- Gallery photos populated by JS -->
+      </div>
+    </section>
+
+    <!-- HARGA & TARIF -->
+    <section id="harga" class="py-12 px-6 bg-[#FAF6ED] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="dollar-sign" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Harga & Tarif Kunjungan</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Daftar harga tiket masuk dan fasilitas pendukung di Fruitopia.</p>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <div class="bg-white p-4 rounded-2xl border border-amber-200/60 shadow-sm flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-[#27411D] text-sm">Tiket Masuk Kebun</h3>
+            <p class="text-[#517541] text-xs mt-0.5">Termasuk tester buah di lokasi</p>
+          </div>
+          <span class="font-extrabold text-[#E06D2D] text-sm bg-amber-100/60 px-3 py-1.5 rounded-xl border border-amber-200">
+            Rp 15.000 / orang
+          </span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-amber-200/60 shadow-sm flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-[#27411D] text-sm">Paket Edukasi Anak</h3>
+            <p class="text-[#517541] text-xs mt-0.5">Termasuk BIBIT tanaman mini & guide</p>
+          </div>
+          <span class="font-extrabold text-[#E06D2D] text-sm bg-amber-100/60 px-3 py-1.5 rounded-xl border border-amber-200">
+            Rp 35.000 / anak
+          </span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-amber-200/60 shadow-sm flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-[#27411D] text-sm">Sewa Keranjang & Gunting Petik</h3>
+            <p class="text-[#517541] text-xs mt-0.5">Deposit KTP / ID Card</p>
+          </div>
+          <span class="font-extrabold text-[#E06D2D] text-sm bg-amber-100/60 px-3 py-1.5 rounded-xl border border-amber-200">
+            Gratis
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOKASI -->
+    <section id="lokasi" class="py-12 px-6 bg-[#F4EEDE] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="navigation" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Lokasi Kebun</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Kunjungi langsung kebun kami di Palangka Raya.</p>
+      </div>
+
+      <div class="bg-[#FAF6ED] p-5 rounded-3xl border border-amber-200/60 shadow-sm flex flex-col gap-4">
+        <div class="flex items-start gap-3">
+          <i data-lucide="map-pin" class="w-5 h-5 text-[#E06D2D] shrink-0 mt-1"></i>
+          <div>
+            <h4 class="font-bold text-[#27411D] text-sm">Alamat Lengkap</h4>
+            <p class="text-[#3c5e2e] text-xs mt-1 leading-relaxed">Jl. Agrowisata KM 5, Palangka Raya, Kalimantan Tengah</p>
+          </div>
+        </div>
+        <a 
+          href="https://maps.google.com/?cid=18047471913162934794"
+          target="_blank"
+          rel="noreferrer"
+          class="w-full py-3.5 bg-[#27411D] text-white rounded-xl font-bold text-xs text-center hover:bg-[#1d3115] transition-colors shadow"
+        >
+          Buka di Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12 px-6 bg-[#FAF6ED] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Pertanyaan Umum (FAQ)</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Hal-hal yang sering ditanyakan seputar wisata petik buah.</p>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <div class="bg-amber-100/40 p-4 rounded-2xl border border-amber-200/60">
+          <h3 class="font-bold text-[#27411D] text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#E06D2D]"></span>
+            Apakah buah yang dipetik wajib dibeli?
+          </h3>
+          <p class="text-[#3c5e2e] text-xs pl-4 leading-relaxed">Ya, buah yang Anda petik sendiri di pohon wajib ditimbang dan dibeli sesuai harga katalog per kilogram.</p>
+        </div>
+        <div class="bg-amber-100/40 p-4 rounded-2xl border border-amber-200/60">
+          <h3 class="font-bold text-[#27411D] text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#E06D2D]"></span>
+            Apakah anak-anak bisa masuk?
+          </h3>
+          <p class="text-[#3c5e2e] text-xs pl-4 leading-relaxed">Tentu saja! Fruitopia sangat ramah anak dan menyediakan paket edukasi pertanian khusus anak.</p>
+        </div>
+        <div class="bg-amber-100/40 p-4 rounded-2xl border border-amber-200/60">
+          <h3 class="font-bold text-[#27411D] text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#E06D2D]"></span>
+            Apakah perlu reservasi sebelum datang?
+          </h3>
+          <p class="text-[#3c5e2e] text-xs pl-4 leading-relaxed">Untuk kunjungan rombongan atau weekend disarankan reservasi terlebih dahulu agar slot petik buah Anda aman.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-12 px-6 bg-[#F4EEDE] border-b border-[#E8DFCE]">
+      <div class="mb-6 flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="quote" class="w-6 h-6 text-[#27411D]"></i>
+          <h2 class="text-2xl font-extrabold text-[#27411D] tracking-tight">Testimoni Pengunjung</h2>
+        </div>
+        <p class="text-[#517541] text-xs">Apa kata mereka yang sudah berkunjung ke Fruitopia.</p>
+      </div>
+
+      <div id="testimonials-container" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+        <!-- Testimonials populated by JS -->
+      </div>
+    </section>
+
+    <!-- FORM RESERVASI -->
+    <section id="booking-form" class="py-12 px-6 bg-[#FAF6ED]">
+      <div class="bg-[#27411D] text-white rounded-[2rem] p-8 shadow-xl relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#3c5e2e] rounded-full pointer-events-none opacity-50"></div>
+        
+        <div class="relative z-10 mb-6">
+          <h2 class="text-2xl font-extrabold mb-2 text-amber-50">Reservasi Kunjungan</h2>
+          <p class="text-amber-100/80 text-xs leading-relaxed">Rencanakan kunjungan petik buah Anda bersama keluarga atau rombongan melalui WhatsApp.</p>
+        </div>
+        
+        <form onsubmit="handleFormSubmit(event)" class="flex flex-col gap-4 relative z-10">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-bold text-amber-200 uppercase tracking-wide ml-1">Nama Lengkap / Rombongan</label>
+            <input 
+              type="text" 
+              name="name" 
+              required
+              placeholder="Ketik nama Anda"
+              class="w-full bg-[#1d3115] border border-amber-200/20 rounded-xl px-4 py-3.5 text-xs text-white placeholder-amber-200/40 focus:outline-none focus:border-amber-400 transition-all"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-bold text-amber-200 uppercase tracking-wide ml-1">Tanggal Kunjungan</label>
+            <input 
+              type="date" 
+              name="date" 
+              required
+              class="w-full bg-[#1d3115] border border-amber-200/20 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-all"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-bold text-amber-200 uppercase tracking-wide ml-1">Jumlah Pengunjung</label>
+            <select 
+              name="visitors" 
+              required
+              class="w-full bg-[#1d3115] border border-amber-200/20 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-all appearance-none"
+            >
+              <option value="" class="bg-[#1d3115]">Pilih jumlah pengunjung...</option>
+              <option value="1-3 Orang (Keluarga Kecil)" class="bg-[#1d3115]">1-3 Orang (Keluarga Kecil)</option>
+              <option value="4-10 Orang (Rombongan Keluarga)" class="bg-[#1d3115]">4-10 Orang (Rombongan Keluarga)</option>
+              <option value=">10 Orang (Wisata Sekolah / Kantor)" class="bg-[#1d3115]">&gt;10 Orang (Wisata Sekolah / Kantor)</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-bold text-amber-200 uppercase tracking-wide ml-1">Catatan Tambahan (Opsional)</label>
+            <textarea 
+              name="notes" 
+              rows="2"
+              placeholder="Cth: Ingin paket edukasi anak..."
+              class="w-full bg-[#1d3115] border border-amber-200/20 rounded-xl px-4 py-3.5 text-xs text-white placeholder-amber-200/40 focus:outline-none focus:border-amber-400 transition-all resize-none"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit"
+            class="w-full mt-2 bg-[#E06D2D] text-white font-bold text-xs tracking-wide py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-[#c95d22] transition-colors shadow-lg"
+          >
+            Kirim Reservasi WhatsApp
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current text-white"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-8 pb-12 text-center flex flex-col items-center justify-center mx-6 mt-4">
+      <div class="w-full h-px bg-amber-200/60 mb-8"></div>
+      
+      <div class="w-16 h-16 bg-white rounded-full shadow-sm border border-amber-200 flex items-center justify-center mb-4 overflow-hidden p-1">
+        <img src="./profile.png" alt="Footer Logo" class="w-full h-full object-contain rounded-full" />
+      </div>
+      
+      <div class="text-[#3c5e2e] text-xs flex flex-col gap-1 items-center">
+        <span class="font-extrabold text-[#27411D] text-sm">Fruitopia Agrowisata</span>
+        <span class="max-w-[250px]">Jl. Agrowisata KM 5, Palangka Raya, Kalimantan Tengah</span>
+      </div>
+
+      <p class="text-[#688a5a] text-[10px] mt-8">
+        © <span id="current-year"></span> Fruitopia Agrowisata. All rights reserved.
+      </p>
+      
+      <a 
+        href="https://www.solusilokal.id" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-[#688a5a] text-[10px] mt-2 tracking-wide font-medium hover:text-[#27411D] transition-colors"
+      >
+        powered by solusilokal.id
+      </a>
+    </footer>
+
+    <!-- STICKY CTA -->
+    <div 
+      id="sticky-cta"
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-[432px] z-40 transition-all duration-500 ease-out translate-y-24 opacity-0 pointer-events-none"
+    >
+      <button 
+        onclick="scrollToSection('booking-form')"
+        class="w-full flex items-center justify-between px-6 py-4 bg-[#27411D] backdrop-blur-xl border border-amber-300/40 rounded-2xl text-white shadow-[0_10px_40px_rgba(39,65,29,0.4)] hover:bg-[#1d3115] active:scale-[0.98] transition-all"
+      >
+        <span class="font-bold text-sm tracking-wide text-amber-200">Reservasi Kunjungan Sekarang</span>
+        <div class="bg-[#E06D2D] text-white p-2 rounded-xl">
+          <i data-lucide="calendar" class="w-4 h-4 stroke-2"></i>
+        </div>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div 
+    id="lightbox-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/95 backdrop-blur-xl"
+    onclick="closeLightbox()"
+  >
+    <button 
+      class="absolute top-6 right-6 p-3 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all z-50 border border-white/20"
+      onclick="closeLightbox()"
+    >
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+
+    <button 
+      class="absolute left-4 p-3 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all z-50 border border-white/20"
+      onclick="prevImage(event)"
+    >
+      <i data-lucide="chevron-left" class="w-6 h-6"></i>
+    </button>
+
+    <div class="w-full max-w-4xl max-h-[100dvh] p-4 flex items-center justify-center" onclick="event.stopPropagation()">
+      <img 
+        id="lightbox-image"
+        src="" 
+        alt="Lightbox View" 
+        class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+      />
+    </div>
+
+    <button 
+      class="absolute right-4 p-3 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all z-50 border border-white/20"
+      onclick="nextImage(event)"
+    >
+      <i data-lucide="chevron-right" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- SHARE MODAL -->
+  <div
+    id="share-modal"
+    class="fixed inset-0 z-50 hidden items-end justify-center bg-slate-900/40 backdrop-blur-sm sm:items-center transition-opacity"
+    onclick="closeShareModal()"
+  >
+    <div
+      class="w-full max-w-[480px] bg-[#FAF6ED] sm:rounded-3xl rounded-t-3xl p-6 relative overflow-hidden border border-amber-200"
+      onclick="event.stopPropagation()"
+    >
+      <div class="flex justify-center items-center mb-6 relative">
+        <h3 class="text-[#27411D] font-bold text-[15px]">Bagikan Fruitopia Agrowisata</h3>
+        <button
+          onclick="closeShareModal()"
+          class="absolute right-0 p-1 text-slate-500 hover:bg-amber-100 rounded-full transition-all"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="bg-amber-100/50 border border-amber-200 rounded-[24px] p-8 flex flex-col items-center justify-center mb-6 shadow-sm">
+        <img src="./profile.png" alt="Profile" class="w-[72px] h-[72px] rounded-full border border-amber-300 mb-4 object-contain bg-white" />
+        <h4 class="text-[#27411D] font-bold text-lg text-center tracking-tight">@fruitopiaagrowisata</h4>
+        <p class="text-[#517541] text-xs mt-1 text-center font-medium opacity-90">Jl. Agrowisata KM 5, Palangka Raya, Kalimantan Tengah</p>
+      </div>
+
+      <div class="flex justify-center gap-4 mb-6">
+        <button
+          id="btn-copy"
+          onclick="copyToClipboard()"
+          class="flex items-center gap-2 px-4 py-3 rounded-2xl bg-white text-[#27411D] border border-amber-200 hover:bg-amber-50 transition-all text-xs font-bold"
+        >
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Salin Tautan</span>
+        </button>
+        <a
+          id="btn-share-wa"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          class="flex items-center gap-2 px-4 py-3 rounded-2xl bg-[#E06D2D] text-white hover:bg-[#c95d22] transition-all text-xs font-bold"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTION SCRIPT -->
+  <script>
+    const pageData = {
+      name: "Fruitopia Agrowisata",
+      phone: "6289529605601",
+      address: "Jl. Agrowisata KM 5, Palangka Raya, Kalimantan Tengah",
+      title: "Sensasi Petik Buah Segar Langsung dari Pohonnya!",
+      description: "Nikmati pengalaman rekreasi edukatif dan alam terbuka yang menyenangkan di Fruitopia. Petik buah segar berkualitas tinggi dengan udara asri langsung dari kebun organik kami.",
+      catalog: [
+        { name: "Jeruk Siam Manis", price: "Rp 35.000 / kg", season: "Panen Raya", img: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=400&h=400", desc: "Jeruk manis segar kaya vitamin C, langsung petik dari pohon." },
+        { name: "Jambu Kristal Renyah", price: "Rp 30.000 / kg", season: "Tersedia", img: "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&q=80&w=400&h=400", desc: "Padat, manis, tanpa biji, dan sangat menyegarkan." },
+        { name: "Melon Golden Premium", price: "Rp 45.000 / kg", season: "Terbatas", img: "https://images.unsplash.com/photo-1571575183767-8c4b57421f1d?auto=format&fit=crop&q=80&w=400&h=400", desc: "Manis legit dengan tekstur daging buah yang lembut dan juicy." },
+        { name: "Kelengkeng Itoh", price: "Rp 40.000 / kg", season: "Musiman", img: "https://images.unsplash.com/photo-1518635017498-87f514b756ba?auto=format&fit=crop&q=80&w=400&h=400", desc: "Buah lebat, daging tebal, biji kecil dan sangat manis." },
+        { name: "Apel Merah Segar", price: "Rp 50.000 / kg", season: "Panen Raya", img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&q=80&w=400&h=400", desc: "Manis renyah dengan aroma harum khas pegunungan." },
+        { name: "Anggur Hitam Manis", price: "Rp 65.000 / kg", season: "Tersedia", img: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&q=80&w=400&h=400", desc: "Bulir padat penuh kesegaran, manis tanpa rasa sepat." },
+        { name: "Buah Persik / Peach", price: "Rp 55.000 / kg", season: "Terbatas", img: "https://images.unsplash.com/photo-1595123550462-f24f037be368?auto=format&fit=crop&q=80&w=400&h=400", desc: "Lembut, berair, dan kaya akan vitamin penambah imun." },
+        { name: "Stroberi Organik", price: "Rp 45.000 / pak", season: "Musiman", img: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&q=80&w=400&h=400", desc: "Asam manis segar, dipetik langsung dari kebun hidroponik." },
+        { name: "Mangga Harum Manis", price: "Rp 38.000 / kg", season: "Panen Raya", img: "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&q=80&w=400&h=400", desc: "Daging buah tebal, harum khas, dan berair manis legit." },
+        { name: "Naga Merah Super", price: "Rp 28.000 / kg", season: "Tersedia", img: "https://images.unsplash.com/photo-1527324793704-d8bc50e3356a?auto=format&fit=crop&q=80&w=400&h=400", desc: "Kaya antioksidan, segar dan manis alami." }
+      ],
+      galleryPhotos: [
+        "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&q=80&w=400&h=600",
+        "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=400&h=600",
+        "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&q=80&w=400&h=600",
+        "https://images.unsplash.com/photo-1571575183767-8c4b57421f1d?auto=format&fit=crop&q=80&w=400&h=600",
+        "https://images.unsplash.com/photo-1518635017498-87f514b756ba?auto=format&fit=crop&q=80&w=400&h=600",
+      ],
+      testimonials: [
+        { name: "Dewi Lestari", rating: 5, text: "Seru banget bisa ngajak anak-anak petik jeruk langsung dari pohonnya. Buahnya manis-manis dan tempatnya bersih!" },
+        { name: "Rian Pratama", rating: 5, text: "Tempat rekreasi keluarga yang edukatif di Palangka Raya. Pelayanannya ramah dan udaranya sejuk." },
+        { name: "Siska Amelia", rating: 4, text: "Jambu kristalnya renyah banget! Puas keliling kebun sambil belajar cara berkebun organik." }
+      ]
+    };
+
+    // Render Catalog
+    const catalogContainer = document.getElementById('catalog-container');
+    catalogContainer.innerHTML = pageData.catalog.map(item => `
+      <div class="snap-center shrink-0 w-[240px] bg-white border border-amber-200/60 rounded-3xl overflow-hidden shadow-sm flex flex-col">
+        <div class="h-40 overflow-hidden relative">
+          <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-2.5 right-2.5 bg-[#E06D2D] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+            ${item.season}
+          </span>
+        </div>
+        <div class="p-4 flex flex-col flex-grow justify-between">
+          <div>
+            <h3 class="font-bold text-[#27411D] text-sm mb-1">${item.name}</h3>
+            <p class="text-slate-500 text-xs mb-3 line-clamp-2">${item.desc}</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-2 border-t border-amber-100">
+            <span class="font-extrabold text-[#E06D2D] text-xs">${item.price}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Render Gallery
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryContainer.innerHTML = pageData.galleryPhotos.map((img, idx) => `
+      <div 
+        onclick="openLightbox(${idx})"
+        class="snap-center shrink-0 w-[240px] aspect-[4/5] rounded-[1.5rem] overflow-hidden cursor-pointer relative group border border-amber-200/60 shadow-md bg-white"
+      >
+        <img 
+          src="${img}" 
+          alt="Galeri Kebun ${idx + 1}" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          loading="lazy"
+        />
+      </div>
+    `).join('');
+
+    // Render Testimonials
+    const testContainer = document.getElementById('testimonials-container');
+    testContainer.innerHTML = pageData.testimonials.map(testi => `
+      <div class="snap-center shrink-0 w-[280px] bg-[#FAF6ED] p-5 rounded-3xl border border-amber-200/60 shadow-sm flex flex-col gap-3">
+        <div class="flex items-center gap-1">
+          ${'<i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>'.repeat(testi.rating)}
+        </div>
+        <p class="text-[#3c5e2e] text-xs leading-relaxed italic">"${testi.text}"</p>
+        <div class="mt-auto pt-3 border-t border-amber-200/60 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-[#27411D] flex items-center justify-center text-white font-bold text-xs">
+            ${testi.name.charAt(0)}
+          </div>
+          <span class="text-xs font-bold text-[#27411D]">${testi.name}</span>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Scroll Sticky CTA
+    const stickyCTA = document.getElementById('sticky-cta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        stickyCTA.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        stickyCTA.classList.add('translate-y-0', 'opacity-100');
+      } else {
+        stickyCTA.classList.remove('translate-y-0', 'opacity-100');
+        stickyCTA.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }
+    }, { passive: true });
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Lightbox
+    let currentLightboxIdx = 0;
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImage = document.getElementById('lightbox-image');
+
+    function openLightbox(idx) {
+      currentLightboxIdx = idx;
+      lightboxImage.src = pageData.galleryPhotos[currentLightboxIdx];
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+      document.body.style.overflow = 'unset';
+    }
+
+    function nextImage(e) {
+      if (e) e.stopPropagation();
+      currentLightboxIdx = (currentLightboxIdx + 1) % pageData.galleryPhotos.length;
+      lightboxImage.src = pageData.galleryPhotos[currentLightboxIdx];
+    }
+
+    function prevImage(e) {
+      if (e) e.stopPropagation();
+      currentLightboxIdx = (currentLightboxIdx - 1 + pageData.galleryPhotos.length) % pageData.galleryPhotos.length;
+      lightboxImage.src = pageData.galleryPhotos[currentLightboxIdx];
+    }
+
+    // Share Modal
+    const shareModal = document.getElementById('share-modal');
+    async function handleShare() {
+      const shareData = {
+        title: pageData.name,
+        text: pageData.title,
+        url: window.location.href,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.error('Error sharing:', err);
+        }
+      } else {
+        document.getElementById('btn-share-wa').href = `https://wa.me/?text=${encodeURIComponent(pageData.title + ' ' + window.location.href)}`;
+        shareModal.classList.remove('hidden');
+        shareModal.classList.add('flex');
+      }
+    }
+
+    function closeShareModal() {
+      shareModal.classList.add('hidden');
+      shareModal.classList.remove('flex');
+    }
+
+    function copyToClipboard() {
+      const tempInput = document.createElement('input');
+      tempInput.value = window.location.href;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const btn = document.getElementById('btn-copy');
+      btn.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-[#27411D]"></i> <span>Tersalin</span>`;
+      lucide.createIcons();
+      setTimeout(() => {
+        btn.innerHTML = `<i data-lucide="copy" class="w-4 h-4"></i> <span>Salin Tautan</span>`;
+        lucide.createIcons();
+      }, 2000);
+    }
+
+    // Booking Form
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const name = formData.get('name');
+      const date = formData.get('date');
+      const visitors = formData.get('visitors');
+      const notes = formData.get('notes');
+      const waUrl = `https://wa.me/${pageData.phone}?text=Halo%20Admin%20${pageData.name},%20saya%20${name}.%20Saya%20ingin%20reservasi%20kunjungan%20petik%20buah%20untuk%20${visitors}%20orang%20pada%20tanggal%20${date}.%20Catatan:%20${notes}`;
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
