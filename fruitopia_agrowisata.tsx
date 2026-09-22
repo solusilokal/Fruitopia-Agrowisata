@@ -30,8 +30,8 @@ const pageData = {
   address: "Jl. Agrowisata KM 5, Palangka Raya, Kalimantan Tengah",
   title: "Sensasi Petik Buah Segar Langsung dari Pohonnya!",
   description: "Nikmati pengalaman rekreasi edukatif dan alam terbuka yang menyenangkan di Fruitopia. Petik buah segar berkualitas tinggi dengan udara asri langsung dari kebun organik kami.",
-  profileImg: "/profile.png",
-  heroImg: "/background.webp",
+  profileImg: "./profile.png",
+  heroImg: "./background.webp",
   links: {
     instagram: "https://www.instagram.com/solusilokal.id",
     tiktok: "https://tiktok.com/@solusilokal.id",
@@ -52,16 +52,16 @@ const pageData = {
     description: "Berdiri sejak tahun 2018, Fruitopia berawal dari lahan percontohan hortikultura lokal yang kini berkembang menjadi kawasan wisata petik buah favorit. Ribuan pengunjung telah menikmati edukasi pertanian dan kesegaran buah langsung dari pohonnya."
   },
   catalog: [
-    { name: "Jeruk Siam Manis", price: "Rp 35.000 / kg", season: "Panen Raya", img: "/public/katalog-1.webp", desc: "Jeruk manis segar kaya vitamin C, langsung petik dari pohon." },
-    { name: "Jambu Kristal Renyah", price: "Rp 30.000 / kg", season: "Tersedia", img: "/public/katalog-2.webp", desc: "Padat, manis, tanpa biji, dan sangat menyegarkan." },
-    { name: "Melon Golden Premium", price: "Rp 45.000 / kg", season: "Terbatas", img: "/public/katalog-3.webp", desc: "Manis legit dengan tekstur daging buah yang lembut dan juicy." },
-    { name: "Kelengkeng Itoh", price: "Rp 40.000 / kg", season: "Musiman", img: "/public/katalog-4.webp", desc: "Buah lebat, daging tebal, biji kecil dan sangat manis." },
-    { name: "Apel Merah Segar", price: "Rp 50.000 / kg", season: "Panen Raya", img: "/public/katalog-5.webp", desc: "Manis renyah dengan aroma harum khas pegunungan." },
-    { name: "Anggur Hitam Manis", price: "Rp 65.000 / kg", season: "Tersedia", img: "/public/katalog-6.webp", desc: "Bulir padat penuh kesegaran, manis tanpa rasa sepat." },
-    { name: "Buah Persik / Peach", price: "Rp 55.000 / kg", season: "Terbatas", img: "/public/katalog-7.webp", desc: "Lembut, berair, dan kaya akan vitamin penambah imun." },
-    { name: "Stroberi Organik", price: "Rp 45.000 / pak", season: "Musiman", img: "/public/katalog-8.webp", desc: "Asam manis segar, dipetik langsung dari kebun hidroponik." },
-    { name: "Mangga Harum Manis", price: "Rp 38.000 / kg", season: "Panen Raya", img: "/public/katalog-9.webp", desc: "Daging buah tebal, harum khas, dan berair manis legit." },
-    { name: "Naga Merah Super", price: "Rp 28.000 / kg", season: "Tersedia", img: "/public/katalog-10.webp", desc: "Kaya antioksidan, segar dan manis alami." }
+    { name: "Jeruk Siam Manis", price: "Rp 35.000 / kg", season: "Panen Raya", img: "./katalog-1.webp", desc: "Jeruk manis segar kaya vitamin C, langsung petik dari pohon." },
+    { name: "Jambu Kristal Renyah", price: "Rp 30.000 / kg", season: "Tersedia", img: "./katalog-2.webp", desc: "Padat, manis, tanpa biji, dan sangat menyegarkan." },
+    { name: "Melon Golden Premium", price: "Rp 45.000 / kg", season: "Terbatas", img: "./katalog-3.webp", desc: "Manis legit dengan tekstur daging buah yang lembut dan juicy." },
+    { name: "Kelengkeng Itoh", price: "Rp 40.000 / kg", season: "Musiman", img: "./katalog-4.webp", desc: "Buah lebat, daging tebal, biji kecil dan sangat manis." },
+    { name: "Apel Merah Segar", price: "Rp 50.000 / kg", season: "Panen Raya", img: "./katalog-5.webp", desc: "Manis renyah dengan aroma harum khas pegunungan." },
+    { name: "Anggur Hitam Manis", price: "Rp 65.000 / kg", season: "Tersedia", img: "./katalog-6.webp", desc: "Bulir padat penuh kesegaran, manis tanpa rasa sepat." },
+    { name: "Buah Persik / Peach", price: "Rp 55.000 / kg", season: "Terbatas", img: "./katalog-7.webp", desc: "Lembut, berair, dan kaya akan vitamin penambah imun." },
+    { name: "Stroberi Organik", price: "Rp 45.000 / pak", season: "Musiman", img: "./katalog-8.webp", desc: "Asam manis segar, dipetik langsung dari kebun hidroponik." },
+    { name: "Mangga Harum Manis", price: "Rp 38.000 / kg", season: "Panen Raya", img: "./katalog-9.webp", desc: "Daging buah tebal, harum khas, dan berair manis legit." },
+    { name: "Naga Merah Super", price: "Rp 28.000 / kg", season: "Tersedia", img: "./katalog-10.webp", desc: "Kaya antioksidan, segar dan manis alami." }
   ],
   pricingList: [
     { item: "Tiket Masuk Kebun", price: "Rp 15.000 / orang", note: "Termasuk tester buah di lokasi" },
@@ -79,11 +79,11 @@ const pageData = {
     { name: "Siska Amelia", rating: 4, text: "Jambu kristalnya renyah banget! Puas keliling kebun sambil belajar cara berkebun organik." }
   ],
   galleryPhotos: [
-    "/public/galeri-1.webp",
-    "/public/galeri-2.webp",
-    "/public/galeri-3.webp",
-    "/public/galeri-4.webp",
-    "/public/galeri-5.webp",
+    "./galeri-1.webp",
+    "./galeri-2.webp",
+    "./galeri-3.webp",
+    "./galeri-4.webp",
+    "./galeri-5.webp",
   ]
 };
 
